@@ -1,1 +1,0 @@
-Please the "For New Fresh Drupal Installation" folder files if you want to install a standalone demo.
