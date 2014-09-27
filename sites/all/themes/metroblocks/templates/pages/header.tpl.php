@@ -53,7 +53,22 @@
       <?php endif; ?>
         <nav class="top-bar"<?php print $top_bar_options; ?>>
           <ul class="title-area">
-            <li class="name"><h1><?php print $linked_site_name; ?></h1></li>
+            <li class="name">              
+              <h1>
+                <?php 
+                  $img_logo = "";
+                  if($logo)
+                    $img_logo = "<img src='". $logo . "' />";
+                  
+                  print l($img_logo . $variables['site_name'], '<front>', array(
+                    'attributes' => array(
+                      'rel'   => 'home',
+                      'title' => strip_tags($variables['site_name']) . ' ' . t('Home'),
+                    ),
+                    'html'    => TRUE,
+                  )); ?>
+              </h1>
+            </li>
             <li class="toggle-topbar menu-icon"><a href="#"><span><?php print $top_bar_menu_text; ?></span></a></li>
           </ul>
           <section class="top-bar-section">
